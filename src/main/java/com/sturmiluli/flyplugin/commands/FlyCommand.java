@@ -13,7 +13,6 @@ public class FlyCommand implements CommandExecutor {
     private ArrayList<Player> list_of_flying_players = new ArrayList<>();
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-
         if (sender instanceof Player) {
             Player player = (Player) sender;
             if (args.length == 0) {
@@ -22,10 +21,8 @@ public class FlyCommand implements CommandExecutor {
         } else if (args.length == 1) {
             Player target = Bukkit.getPlayer(args[0]);
             flyMethod(target);
-
-            return true;
         }
-        return true; //DELETE THIS FUCKING SHIT
+        return true;
     }
     private void flyMethod(Player player){
         if (player.hasPermission("flyplugin.fly")) {
