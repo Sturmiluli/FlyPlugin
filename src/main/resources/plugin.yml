@@ -1,0 +1,8 @@
+name: FlyPlugin
+version: '${project.version}'
+main: com.sturmiluli.flyplugin.Main
+api-version: 1.18
+commands:
+  fly:
+    description: Fly Free like a bird
+    usage: /<command>
